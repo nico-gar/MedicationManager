@@ -10,6 +10,7 @@
 		1C29255B292D51A400239E29 /* MedicationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C29255A292D51A400239E29 /* MedicationListViewController.swift */; };
 		1C29255D292D51C100239E29 /* MedicationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C29255C292D51C100239E29 /* MedicationDetailViewController.swift */; };
 		1C29255F292D539D00239E29 /* MedicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C29255E292D539D00239E29 /* MedicationTableViewCell.swift */; };
+		1C292565292D578100239E29 /* MedicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C292564292D578100239E29 /* MedicationController.swift */; };
 		1C9F6248292D19ED007C7A37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9F6247292D19ED007C7A37 /* AppDelegate.swift */; };
 		1C9F624A292D19ED007C7A37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9F6249292D19ED007C7A37 /* SceneDelegate.swift */; };
 		1C9F624F292D19ED007C7A37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C9F624D292D19ED007C7A37 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 		1C29255A292D51A400239E29 /* MedicationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationListViewController.swift; sourceTree = "<group>"; };
 		1C29255C292D51C100239E29 /* MedicationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationDetailViewController.swift; sourceTree = "<group>"; };
 		1C29255E292D539D00239E29 /* MedicationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationTableViewCell.swift; sourceTree = "<group>"; };
+		1C292564292D578100239E29 /* MedicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationController.swift; sourceTree = "<group>"; };
 		1C9F6244292D19ED007C7A37 /* MedicationManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicationManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C9F6247292D19ED007C7A37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C9F6249292D19ED007C7A37 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		1C292566292E9E7000239E29 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1C292564292D578100239E29 /* MedicationController.swift */,
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
 		1C9F623B292D19ED007C7A37 = {
 			isa = PBXGroup;
 			children = (
@@ -100,10 +110,11 @@
 		1C9F6246292D19ED007C7A37 /* MedicationManager */ = {
 			isa = PBXGroup;
 			children = (
-				1C292563292D53FC00239E29 /* Resources */,
 				1C292562292D53E700239E29 /* CoreData */,
 				1C292560292D53AF00239E29 /* ViewControllers */,
+				1C292566292E9E7000239E29 /* ModelControllers */,
 				1C292561292D53C400239E29 /* CustomViews */,
+				1C292563292D53FC00239E29 /* Resources */,
 			);
 			path = MedicationManager;
 			sourceTree = "<group>";
@@ -183,6 +194,7 @@
 				1C9F6248292D19ED007C7A37 /* AppDelegate.swift in Sources */,
 				1C29255B292D51A400239E29 /* MedicationListViewController.swift in Sources */,
 				1C9F6252292D19ED007C7A37 /* MedicationManager.xcdatamodeld in Sources */,
+				1C292565292D578100239E29 /* MedicationController.swift in Sources */,
 				1C29255F292D539D00239E29 /* MedicationTableViewCell.swift in Sources */,
 				1C9F624A292D19ED007C7A37 /* SceneDelegate.swift in Sources */,
 			);

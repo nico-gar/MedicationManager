@@ -9,15 +9,12 @@ import UIKit
 
 class MedicationTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var wasTakenButton: UIButton!
+    
+
+    @IBAction func wasTakenButtonTapped(_ sender: UIButton) {
+        print("Was taken button tapped")
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }

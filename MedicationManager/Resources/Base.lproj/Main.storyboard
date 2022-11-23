@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="75" id="N18-vl-Scc">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="75" id="N18-vl-Scc" customClass="MedicationTableViewCell" customModule="MedicationManager" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N18-vl-Scc" id="162-Pq-lRu">
@@ -55,6 +55,9 @@
                                                             </hierarchicalColors>
                                                         </imageReference>
                                                     </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="wasTakenButtonTapped:" destination="N18-vl-Scc" eventType="touchUpInside" id="3dQ-tQ-D2Z"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -71,6 +74,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="nameLabel" destination="LMM-54-xR8" id="gd4-ke-fo2"/>
+                                            <outlet property="timeLabel" destination="Hld-2K-O96" id="apR-Fj-xs6"/>
+                                            <outlet property="wasTakenButton" destination="LN6-tV-lfJ" id="ynZ-ln-OQZ"/>
                                             <segue destination="3FX-nr-mKC" kind="show" identifier="toMedicationDetails" id="ozL-M1-adk"/>
                                         </connections>
                                     </tableViewCell>
@@ -128,7 +134,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="oMZ-6X-ToO">
-                                        <rect key="frame" x="0.0" y="123" width="369" height="68"/>
+                                        <rect key="frame" x="0.0" y="122.66666666666666" width="369" height="68"/>
                                     </datePicker>
                                 </subviews>
                             </stackView>
