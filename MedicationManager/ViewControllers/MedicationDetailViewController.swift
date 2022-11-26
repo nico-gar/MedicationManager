@@ -12,25 +12,36 @@ class MedicationDetailViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    var medicaiton: Medication?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let medication = medicaiton,
+           let timeOfDay = medication.timeOfDay{
+            title = "Medication Details"
+            nameTextField.text = medication.name
+            datePicker.date = timeOfDay
+        } else {
+            title = "Add Medicaiton"
+        }
+        
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
+        guard let name = nameTextField.text,
+              !name.isEmpty
+        else { return }
         
-    }
-    
-    /*
-    // MARK: - Navigation
+        let timeOfDay = datePicker.date
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        if let medication = medicaiton {
+            MedicationController.shared.updateMedication(medication: medication, name: name, timeOfDay: timeOfDay)
+        } else {
+            MedicationController.shared.create(name: name, timeOfDay: timeOfDay)
+        }
 
+        navigationController?.popViewController(animated: true)
+    }
 }

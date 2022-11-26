@@ -11,6 +11,10 @@
 		1C29255D292D51C100239E29 /* MedicationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C29255C292D51C100239E29 /* MedicationDetailViewController.swift */; };
 		1C29255F292D539D00239E29 /* MedicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C29255E292D539D00239E29 /* MedicationTableViewCell.swift */; };
 		1C292565292D578100239E29 /* MedicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C292564292D578100239E29 /* MedicationController.swift */; };
+		1C292568292EA06800239E29 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C292567292EA06800239E29 /* CoreDataStack.swift */; };
+		1C29256A292EA8C100239E29 /* Medication+convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C292569292EA8C100239E29 /* Medication+convenience.swift */; };
+		1C29256C292EBAD800239E29 /* DateFormatter+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C29256B292EBAD800239E29 /* DateFormatter+Extras.swift */; };
+		1C29256E29312DAD00239E29 /* TakenDate+convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C29256D29312DAD00239E29 /* TakenDate+convenience.swift */; };
 		1C9F6248292D19ED007C7A37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9F6247292D19ED007C7A37 /* AppDelegate.swift */; };
 		1C9F624A292D19ED007C7A37 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9F6249292D19ED007C7A37 /* SceneDelegate.swift */; };
 		1C9F624F292D19ED007C7A37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C9F624D292D19ED007C7A37 /* Main.storyboard */; };
@@ -24,6 +28,10 @@
 		1C29255C292D51C100239E29 /* MedicationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationDetailViewController.swift; sourceTree = "<group>"; };
 		1C29255E292D539D00239E29 /* MedicationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationTableViewCell.swift; sourceTree = "<group>"; };
 		1C292564292D578100239E29 /* MedicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationController.swift; sourceTree = "<group>"; };
+		1C292567292EA06800239E29 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		1C292569292EA8C100239E29 /* Medication+convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Medication+convenience.swift"; sourceTree = "<group>"; };
+		1C29256B292EBAD800239E29 /* DateFormatter+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extras.swift"; sourceTree = "<group>"; };
+		1C29256D29312DAD00239E29 /* TakenDate+convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TakenDate+convenience.swift"; sourceTree = "<group>"; };
 		1C9F6244292D19ED007C7A37 /* MedicationManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicationManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C9F6247292D19ED007C7A37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C9F6249292D19ED007C7A37 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +74,9 @@
 			isa = PBXGroup;
 			children = (
 				1C9F6250292D19ED007C7A37 /* MedicationManager.xcdatamodeld */,
+				1C292567292EA06800239E29 /* CoreDataStack.swift */,
+				1C292569292EA8C100239E29 /* Medication+convenience.swift */,
+				1C29256D29312DAD00239E29 /* TakenDate+convenience.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -79,6 +90,7 @@
 				1C9F6253292D19EE007C7A37 /* Assets.xcassets */,
 				1C9F6255292D19EE007C7A37 /* LaunchScreen.storyboard */,
 				1C9F6258292D19EE007C7A37 /* Info.plist */,
+				1C29256B292EBAD800239E29 /* DateFormatter+Extras.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -195,8 +207,12 @@
 				1C29255B292D51A400239E29 /* MedicationListViewController.swift in Sources */,
 				1C9F6252292D19ED007C7A37 /* MedicationManager.xcdatamodeld in Sources */,
 				1C292565292D578100239E29 /* MedicationController.swift in Sources */,
+				1C29256E29312DAD00239E29 /* TakenDate+convenience.swift in Sources */,
 				1C29255F292D539D00239E29 /* MedicationTableViewCell.swift in Sources */,
+				1C29256A292EA8C100239E29 /* Medication+convenience.swift in Sources */,
 				1C9F624A292D19ED007C7A37 /* SceneDelegate.swift in Sources */,
+				1C292568292EA06800239E29 /* CoreDataStack.swift in Sources */,
+				1C29256C292EBAD800239E29 /* DateFormatter+Extras.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
