@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol MedicationTableViewCellDelegate: class {
+protocol MedicationTableViewCellDelegate: AnyObject {
     func medicationWasTakenButtonTapped(medication: Medication, wasTaken: Bool)
 }
 

@@ -10,11 +10,16 @@ import UIKit
 class MedicationListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var moodSurveyButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         MedicationController.shared.fetchMedication()
+        guard let survey = MoodSurveyController.shared.fetchTodaysSurvey()
+        else { return }
+        
+        moodSurveyButton.setTitle(survey.mentalState, for: .normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -29,6 +34,15 @@ class MedicationListViewController: UIViewController {
     }
     
     
+    @IBAction func surveyButtonTapped(_ sender: UIButton) {
+        guard let moodSurveyViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "moodSurveyViewController")
+        as? MoodSurveyViewController else { return }
+        
+        moodSurveyViewController.delegate = self
+        
+        navigationController?.present(moodSurveyViewController, animated: true, completion: nil)
+        
+    }
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -84,5 +98,12 @@ extension MedicationListViewController: MedicationTableViewCellDelegate {
     func medicationWasTakenButtonTapped(medication: Medication, wasTaken: Bool) {
         MedicationController.shared.markMedicationTaken(medication: medication, wasTaken: wasTaken)
         tableView.reloadData()
+    }
+}
+
+extension MedicationListViewController: MoodSurveyViewControllerDelegate {
+    func moodButtonTapped(with emoji: String) {
+        MoodSurveyController.shared.didTapMoodEmoji(emoji)
+        moodSurveyButton.setTitle(emoji, for: .normal)
     }
 }
